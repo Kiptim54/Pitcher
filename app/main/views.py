@@ -4,3 +4,9 @@ from . import main
 @main.route('/')
 def index():
     return render_template('index.html')
+
+@main.route('/about')
+def about():
+    title= "About us"
+
+    return render_template('aboutus.html', title=title)

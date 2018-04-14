@@ -36,3 +36,9 @@ def register():
         return redirect(url_for('auth.login'))
         title = "New Account"
     return render_template('auth/register.html',registration_form = form)
+
+@auth.route('/about')
+def about():
+    title= "About us"
+
+    return render_template('aboutus.html', title=title)
