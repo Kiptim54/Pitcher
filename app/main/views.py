@@ -3,4 +3,4 @@ from . import main
 
 @main.route('/')
 def index():
-    return 'Hey Brenda'
+    return render_template('index.html')
