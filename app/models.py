@@ -32,14 +32,7 @@ class User(db.Model, UserMixin):
     about_me =db.Column(db.String(140))
     last_seen=db.Column(db.DateTime, default=datetime.utcnow)
 
+
     def __repr__(self):
         return f'User{self.username}'
 
-class Post(db.Model):
-    __tablename__='posts'
-    id = db.Column(db.Integer,primary_key = True)
-    post = db.Column(db.String(225), primary_key=True)
-    category = db.Column(db.String(140))
-
-    def __repr__(self):
-        return f'Post{self.post}'
