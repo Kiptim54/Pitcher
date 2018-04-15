@@ -2,7 +2,11 @@
 {% block content %}
 <div class="container">
         <div class="jumbotron">
-                <h1>Hey!</h1>
+                {% if current_user.is_authenticated %}
+                <h3>Hey {{current_user.username}}!</h3>
+                {% else %}
+                <h3>Hey Stranger!</h3>
+                {% endif %}
                 <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
               </div>
 </div>
